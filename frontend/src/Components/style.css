@@ -114,3 +114,12 @@ body {
 }
 
 /* Styles for the welcome page grid */
+.welcomePage {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 180px calc(100vw - 480px) 300px;
+}
+.pageColumn {
+  margin-top: 60px;
+}

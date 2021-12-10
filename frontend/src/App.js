@@ -5,6 +5,7 @@ import SignUp from "./Components/Signup"
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import SignUpPage from './Components/SignUpPage';
+import WelcomePage from './Components/WelcomePage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="App">
       <Switch>
           <Route path="/signup" component={SignUpPage} />
+          <Route path="/welcome" component={WelcomePage} />
           <Route path="/" component={SignIn} />
       </Switch>
       </div>
