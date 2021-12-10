@@ -1,5 +1,5 @@
 /* Importing the fonts for the project */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 body {
   margin: 0;
@@ -121,5 +121,35 @@ body {
   grid-template-columns: 180px calc(100vw - 480px) 300px;
 }
 .pageColumn {
-  margin-top: 60px;
+  padding-top: 40px;
+}
+/* Styles for the SideNav Component */
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  text-align: left;
+  border-right: 2px solid #cfcfcf;
+}
+.brandName {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+.navItems {
+  list-style-type: none;
+  padding: 0;
+}
+.navItem {
+  margin-bottom: 50px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.navItemImage {
+  width: 25px;
+  margin-right: 8px;
 }
