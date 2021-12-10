@@ -1,0 +1,60 @@
+/* Importing the fonts for the project */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+}
+/* Styles for the signUp page */
+.signUpContainer {
+  padding: 15px;
+  text-align: left;
+  background-color: #fff0f0;
+}
+.signUpHeader {
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.signInSection {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 80px;
+}
+.signInBold {
+  font-weight: 600;
+}
+/* Styles for the Sign Up Form */
+
+.formInput {
+  padding: 24px 17px;
+  border-radius: 15px;
+  border: 0;
+  background-color: #ffddc4;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.formInput:focus {
+  outline: 0;
+}
+.usersNames {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.usersNames .name {
+  max-width: 34%;
+}
+.formInput.fullSize {
+  width: calc(100% - 35px);
+}
+.formButton {
+  border: 0;
+  padding: 25px 100px;
+  border-radius: 15px;
+  background-color: #feb062;
+}
+.formButton:focus {
+  outline: 0;
+}
