@@ -52,11 +52,13 @@ input {
 
 .title {
   margin: 0;
+  text-align: left;
 }
 
 .subtitle {
   font-weight: lighter;
   margin-bottom: 4rem;
+  text-align: left;
 }
 
 b {
