@@ -119,9 +119,12 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 180px calc(100vw - 480px) 300px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
 }
 .pageColumn {
-  padding-top: 40px;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 /* Styles for the SideNav Component */
 .sideNav {
@@ -133,9 +136,9 @@ body {
 }
 .brandName {
   font-size: 24px;
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   margin-bottom: 80px;
+  margin-top: 0;
 }
 .navItems {
   list-style-type: none;
@@ -144,7 +147,6 @@ body {
 .navItem {
   margin-bottom: 50px;
   font-size: 14px;
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -152,4 +154,42 @@ body {
 .navItemImage {
   width: 25px;
   margin-right: 8px;
+}
+/* Styles for the MainContent Page */
+.mainContent {
+  padding: 60px 30px 40px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.mainHeader {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.welcomeContent {
+  height: 200px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #33cbcf;
+  margin-bottom: 60px;
+}
+.accountsSectionTitle,
+.insghtsSectionTitle {
+  font-size: 20px;
+  font-weight: sans-serif;
+  margin-bottom: 6px;
+}
+.seeMoreSection {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.accountsTableContainer,
+.insightsInfoContainer {
+  height: 170px;
+  width: 100%;
+  border: 2px solid #ffddc4;
+  border-radius: 15px;
 }
