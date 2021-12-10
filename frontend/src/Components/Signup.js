@@ -1,10 +1,12 @@
+import {Link} from 'react-router-dom';
+
 export default function SignUp(props) {
     return (
       <div className="signUpContainer">
         <header className="signUpHeader">Sign up on BRAND</header>
         <p className="signInSection">
           <span>Have an account? </span>
-          <span className="signInBold">Sign in</span>
+          <Link className="signInBold" to="signin">Sign in</Link>
         </p>
         <form className="signUpForm">
           <section className="usersNames">
