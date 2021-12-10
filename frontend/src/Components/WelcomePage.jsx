@@ -1,9 +1,10 @@
 import SideNav from './SideNav';
+import MainContent from './MainContent';
 export default function WelcomePage(props) {
     return (
         <div className="welcomePage">
             <SideNav/>
-            <main className="mainContent pageColumn"></main>
+            <MainContent/>
             <section className="subscriptionSection pageColumn"></section>
         </div>
     );
