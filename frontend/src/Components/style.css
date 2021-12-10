@@ -5,12 +5,14 @@ body {
   margin: 0;
   box-sizing: border-box;
   width: 100vw;
+  overflow-x: hidden;
 }
 /* Styles for the signUp page */
 .signUpContainer {
   padding: 15px;
   text-align: left;
   background-color: #fff0f0;
+  height: 100vh;
 }
 .signUpHeader {
   color: black;
@@ -26,7 +28,10 @@ body {
   font-weight: 600;
 }
 /* Styles for the Sign Up Form */
-
+.signUpForm {
+  /* max-width: 100vw; */
+  width: 100%;
+}
 .formInput {
   padding: 24px 17px;
   border-radius: 15px;
@@ -43,11 +48,21 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+@media screen and (max-width: 440px) {
+  .usersNames {
+    width: calc(100% - 35px);
+  }
+}
 .usersNames .name {
   max-width: 34%;
 }
 .formInput.fullSize {
   width: calc(100% - 35px);
+}
+@media screen and (max-width: 440px) {
+  .formInput.fullSize {
+    width: calc(100% - 70px);
+  }
 }
 .formButton {
   border: 0;
@@ -55,6 +70,45 @@ body {
   border-radius: 15px;
   background-color: #feb062;
 }
+@media screen and (max-width: 440px) {
+  .formButton {
+    width: calc(100% - 35px);
+  }
+}
 .formButton:focus {
   outline: 0;
+}
+/* Styles for the form image */
+.formImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 65%;
+}
+@media screen and (max-width: 720px) {
+  .formImageContainer {
+    display: none;
+  }
+  .signUpContainer {
+    width: 100%;
+  }
+}
+.formImage {
+  width: 40%;
+  max-width: 400px;
+}
+/* Styles for the signUpPage */
+.signUpPage {
+  max-width: 100vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+@media screen and (min-width: 720px) {
+  .signUpContainer {
+    width: 35%;
+    padding: 60px;
+  }
 }
