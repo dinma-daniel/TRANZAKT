@@ -1,5 +1,5 @@
-import FormImage from "./formImage";
-import SignUp from "./SignUp";
+import FormImage from "./FormImage";
+import SignUp from "./Signup";
 export default function SignUpPage(props) {
   return (
     <div className="signUpPage">
