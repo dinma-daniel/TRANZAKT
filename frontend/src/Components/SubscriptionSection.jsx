@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import SubscriptionSectionRow from './SubscriptionSectionRow';
+
 export default function SubscriptionSection(props) {
     const [subscriptions, setSubscriptions] = useState([
         ['DSTV', '25th September'],
@@ -31,7 +33,9 @@ export default function SubscriptionSection(props) {
                 <button> <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
             </section>
             <h2 className="subscriptionsHeader">Subscriptions</h2>
+            <Link to="/subscription">
             <p className="seeMoreSection">see more</p>
+
             <table className="subscriptionDetails">
                 <thead>
                     <tr>

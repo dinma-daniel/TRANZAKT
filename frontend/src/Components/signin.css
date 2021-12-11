@@ -30,11 +30,12 @@ form {
 }
 
 input {
-  padding: 1.7rem 2rem;
+  padding: 1.7rem 5rem;
   border-radius: 15px;
   margin: 0.5rem 0;
   border: none;
   background-color: #ffddc4;
+  /* width: 100%; */
 }
 
 .formBtn {
@@ -42,7 +43,7 @@ input {
   border-radius: 15px;
   border: none;
   background-color: #feb062;
-  width: 55%;
+  width: 48%;
   transition: 1s;
 }
 
