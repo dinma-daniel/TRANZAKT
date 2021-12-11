@@ -48,7 +48,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 720px) {
   .usersNames {
     width: calc(100% - 35px);
   }
@@ -59,7 +59,7 @@ body {
 .formInput.fullSize {
   width: calc(100% - 35px);
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 720px) {
   .formInput.fullSize {
     width: calc(100% - 70px);
   }
@@ -70,7 +70,7 @@ body {
   border-radius: 15px;
   background-color: #feb062;
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 720px) {
   .formButton {
     width: calc(100% - 35px);
   }
