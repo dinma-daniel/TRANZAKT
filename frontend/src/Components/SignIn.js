@@ -11,16 +11,7 @@ const SignIn = () => {
 
                 <div>
                     <form>
-                    <input
-                    type="text"
-                    placeholder="First Name"
-                    />
-                    <br/>
-                    <input
-                    type="text"
-                    placeholder="Last Name"
-                    />
-                    <br/>
+                    
                     <input
                     type="text"
                     placeholder="Email"

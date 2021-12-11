@@ -6,7 +6,9 @@ export default function SignUp(props) {
         <header className="signUpHeader">Sign up on BRAND</header>
         <p className="signInSection">
           <span>Have an account? </span>
-          <Link className="signInBold" to="signin">Sign in</Link>
+          <Link to="/">
+          <span className="signInBold">Sign in</span>
+          </Link>
         </p>
         <form className="signUpForm">
           <section className="usersNames">
