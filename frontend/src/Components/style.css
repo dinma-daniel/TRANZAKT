@@ -96,7 +96,7 @@ body {
 }
 .formImage {
   width: 40%;
-  max-width: 400px;
+  max-width: 500px;
 }
 /* Styles for the signUpPage */
 .signUpPage {
@@ -118,7 +118,7 @@ body {
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-columns: 180px calc(100vw - 480px) 300px;
+  grid-template-columns: 180px calc(100vw - 560px) 380px;
   text-align: left;
   font-family: "Montserrat", sans-serif;
 }
@@ -196,12 +196,12 @@ body {
 /* Styles for the subscription Section */
 .subscriptionSection {
   background-color: #fff0f0;
-  padding: 60px 30px 40px 40px;
+  padding: 60px 40px 40px 40px;
   display: flex;
   flex-direction: column;
 }
 .iconSection {
-  padding-left: 120px;
+  padding-left: 180px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
