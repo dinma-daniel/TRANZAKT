@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
 
 export default function SignUp(props) {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("ddd");
+  const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
