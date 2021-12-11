@@ -1,4 +1,13 @@
+import SubscriptionSectionRow from './SubscriptionSectionRow';
+import {useState} from 'react';
 export default function SubscriptionSection(props) {
+    const [subscriptions, setSubscriptions] = useState([
+        ['DSTV', '25th September'],
+        ['Spotify', '25th September'],
+        ['Netflix', '25th September'],
+        ['Figma', '25th September'],
+        ['Youtube', '25th September']
+    ])
     return (
         <section className="subscriptionSection pageColumn">
             <section className="iconSection">
@@ -9,14 +18,13 @@ export default function SubscriptionSection(props) {
             <p className="seeMoreSection">see more</p>
             <table className="subscriptionDetails">
                 <thead>
-                    <th>Subs Made</th>
-                    <th>Due Date</th>
+                    <tr>
+                        <th>Subs Made</th>
+                        <th>Due Date</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>DSTV</td>
-                        <td>25th September</td>
-                    </tr>
+                    {subscriptions.map(subscription => <SubscriptionSectionRow subName={subscription[0]} dueDate={subscription[1]} key={subscriptions.indexOf(subscription)}/>)}
                 </tbody>
             </table>
             <div className="billing">Keep track of your billing</div>
