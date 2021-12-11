@@ -53,7 +53,7 @@ body {
 .formButton {
   width: 55%;
 }
-@media screen and (max-width: 440px) {
+
 @media screen and (max-width: 720px) {
   .usersNames {
     width: calc(100% - 35px);
@@ -268,4 +268,4 @@ body {
   position: relative;
   right: 20px;
 }
-}
+
