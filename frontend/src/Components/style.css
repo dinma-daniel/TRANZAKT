@@ -26,6 +26,7 @@ body {
 }
 .signInBold {
   font-weight: 600;
+  color: #df7000;
 }
 /* Styles for the Sign Up Form */
 .signUpForm {
@@ -47,6 +48,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.formButton {
+  width: 55%;
 }
 @media screen and (max-width: 440px) {
   .usersNames {
