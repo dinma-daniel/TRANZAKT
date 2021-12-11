@@ -7,7 +7,18 @@ export default function SubscriptionSection(props) {
             </section>
             <h2 className="subscriptionsHeader">Subscriptions</h2>
             <p className="seeMoreSection">see more</p>
-            <div className="subscriptionDetails"></div>
+            <table className="subscriptionDetails">
+                <thead>
+                    <th>Subs Made</th>
+                    <th>Due Date</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DSTV</td>
+                        <td>25th September</td>
+                    </tr>
+                </tbody>
+            </table>
             <div className="billing">Keep track of your billing</div>
             <img className="billingImage" src={require('../images/credit-card.png').default} />
         </section>

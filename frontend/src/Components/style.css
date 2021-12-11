@@ -175,7 +175,7 @@ body {
   margin-bottom: 60px;
 }
 .accountsSectionTitle,
-.insghtsSectionTitle {
+.insightsSectionTitle {
   font-size: 20px;
   font-weight: sans-serif;
   margin-bottom: 6px;
@@ -186,12 +186,34 @@ body {
   font-weight: 400;
   margin-bottom: 15px;
 }
+.accountsTableContainer {
+  border-spacing: 0 25px;
+  padding: 0px 70px;
+}
+.insightsInfoContainer {
+  min-height: 200px;
+}
 .accountsTableContainer,
 .insightsInfoContainer {
-  height: 170px;
   width: 100%;
   border: 2px solid #ffddc4;
   border-radius: 15px;
+  font-size: 14px;
+}
+.insightsInfoContainer p {
+  margin: 30px 0px 30px 70px;
+}
+.accName {
+  text-align: left;
+}
+.accNumber {
+  text-align: center;
+}
+.bankNumber {
+  text-align: right;
+}
+.accountRow {
+  margin-bottom: 25px;
 }
 /* Styles for the subscription Section */
 .subscriptionSection {
@@ -221,6 +243,12 @@ body {
   border: 2px solid #33cbcf;
   border-radius: 15px;
   margin-bottom: 70px;
+  padding: 20px;
+  font-size: 14px;
+}
+.subscriptionDetails th {
+  font-weight: 400;
+  font-size: 14px;
 }
 .billing {
   font-size: 24px;
