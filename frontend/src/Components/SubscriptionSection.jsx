@@ -34,8 +34,8 @@ export default function SubscriptionSection(props) {
             </section>
             <h2 className="subscriptionsHeader">Subscriptions</h2>
             <Link to="/subscription">
-            <p className="seeMoreSection">see more</p>
-
+                <p className="seeMoreSection">see more</p>
+            </Link>
             <table className="subscriptionDetails">
                 <thead>
                     <tr>
