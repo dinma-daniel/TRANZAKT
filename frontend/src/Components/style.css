@@ -269,3 +269,117 @@ body {
   right: 20px;
 }
 
+
+/* styling for subscription page  */
+
+.sub__body {
+  display: flex;
+  height: 100vh;
+}
+
+.registration {
+  /* border: 1px solid black; */
+  flex: 0.5;
+}
+
+.sub__section {
+  /* border: 1px solid black; */
+  flex: 0.5;
+}
+
+.split__input {
+  /* border: 1px solid black; */
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-between;
+}
+
+.reg__form {
+  display: flex;
+  margin: 0 auto;
+  height: 90vh;
+  width: 80%;
+  /* border: 1px solid black; */
+  text-align: left;
+  justify-content: center;
+}
+
+.sub__duration {
+  width: 25%;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+}
+
+.month {
+  margin-left: 1rem;
+}
+
+.radios {
+  /* border: 1px solid black; */
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.radios input {
+  border: #ffddc4;
+  background-color: #df7000;
+  cursor: pointer;
+}
+
+label {
+  margin-left: 2em;
+}
+
+.reg__header {
+  margin-bottom: 2rem;
+}
+
+/* styling for subscription section  */
+
+.sub__section {
+  background-color: #fff0f0;
+}
+
+.sub__section__body {
+  text-align: left;
+  /* border: 1px solid black; */
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.iconbody {
+  display: flex;
+}
+
+.iconSec__right {
+  flex: 0.2;
+  /* border: 1px solid black; */
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+}
+
+.left {
+  /* border: 1px solid black; */
+  flex: 0.8;
+}
+
+.sub__container {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #33cbcf;
+  padding: 2rem 0;
+  border-radius: 15px;
+}
+
+select {
+  padding: 1.7rem 5rem;
+  border-radius: 15px;
+  margin: 0.5rem 0;
+  border: none;
+  background-color: #ffddc4;
+}
