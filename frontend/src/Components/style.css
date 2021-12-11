@@ -222,3 +222,12 @@ body {
   border-radius: 15px;
   margin-bottom: 70px;
 }
+.billing {
+  font-size: 24px;
+  font-weight: 700;
+}
+.billingImage {
+  width: calc(100% + 40px);
+  position: relative;
+  right: 20px;
+}
