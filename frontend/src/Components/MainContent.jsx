@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import AccountRow from "./AccountRow";
+import { Link } from "react-router-dom";
 
 export default function MainContent(props) {
     const [accounts, setAccounts] = useState([
@@ -31,7 +32,7 @@ export default function MainContent(props) {
             </section>
             <section className="insightSection">
                 <h2 className="insightsSectionTitle">Personal Insight</h2>
-                <p className="seeMoreSection">see more</p>
+                <p className="seeMoreSection"><Link to="/insight">see more</Link></p>
                 <div className="insightsInfoContainer">
                     <p>During October, your financial activities spike up</p>
                     <p>You spend more on paying debts</p>

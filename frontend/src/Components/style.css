@@ -197,8 +197,9 @@ body {
 .accountsSectionTitle,
 .insightsSectionTitle {
   font-size: 20px;
-  font-weight: sans-serif;
+  /* font-weight: sans-serif; */
   margin-bottom: 6px;
+  margin-top: 30px;
 }
 .seeMoreSection {
   text-align: right;
@@ -407,4 +408,43 @@ select {
   margin: 0.5rem 0;
   border: none;
   background-color: #ffddc4;
+}
+
+/* Styles for the insight column */
+.insightColumn {
+  width: calc(100vw - 180px);
+  box-sizing: border-box;
+  margin-left: 180px;
+  padding-left: 45px;
+  padding-right: 45px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+.insightSectionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.insightSectionHeader h1 {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+.insightColumn .iconSection {
+  width: 140px;
+}
+.mainInsightSection {
+  padding-left: 75px;
+}
+.mainInsightSection p {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 65px;
+}
+.insightCarousel {
+  width: calc(100% - 140px);
+  height: 380px;
+  background-color: #fff0f0;
+  border-radius: 15px;
 }
