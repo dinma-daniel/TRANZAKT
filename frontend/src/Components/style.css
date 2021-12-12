@@ -181,6 +181,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .mainHeader {
   font-size: 30px;
   font-weight: 600;
@@ -193,7 +194,33 @@ body {
   border-radius: 15px;
   background-color: #33cbcf;
   margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
 }
+
+.formImg {
+  /* border: 1px solid black; */
+  height: 100%;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.welcomeContent__text {
+  /* border: 1px solid black; */
+  font-size: xx-large;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.mainbody {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .accountsSectionTitle,
 .insightsSectionTitle {
   font-size: 20px;
@@ -235,6 +262,7 @@ body {
 }
 .accountRow {
   margin-bottom: 25px;
+  overflow-y: scroll;
 }
 /* Styles for the subscription Section */
 .subscriptionSection {
@@ -473,4 +501,10 @@ select {
 /* Style for the bold part of the tranzakt logo */
 .boldLetters {
   font-weight: 800;
+.mono__btn {
+  background-color: #feb062;
+  border-radius: 5px;
+  border: none;
+  padding: 1rem;
+  color: white;
 }

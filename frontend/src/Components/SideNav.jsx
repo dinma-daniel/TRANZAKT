@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 export default function SideNav(props) {
     return (
         <nav className="sideNav pageColumn">
@@ -5,19 +7,19 @@ export default function SideNav(props) {
             <ul className="navItems">
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/darhboard_alt.png').default} />
-                    <span>First page</span>
+                  <Link to="/welcome">  <span>Welcome</span></Link>
                 </li>
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/Menu.png').default} />
-                    <span>Second page</span>
+                  <Link to="/subscription">  <span>Subscription</span></Link>
                 </li>
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/Download_circle_light.png').default} />
-                    <span>Third page</span>
+                    <Link to='/insight'><span>Personal Insight</span></Link>
                 </li>
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/Scan_alt_light.png').default} />
-                    <span>Fourth page</span>
+                    <span>Coming soon</span>
                 </li>
             </ul>
         </nav>

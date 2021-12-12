@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AccountRow from "./AccountRow";
 import { Link } from "react-router-dom";
 import {motion} from 'framer-motion';
+import Mono from "./mono";
+
 
 export default function MainContent(props) {
-    const [accounts, setAccounts] = useState([
-        ["Ronald Dosunmu", "01234677", "GT Bank"],
-        ["Dinma Okonicha", "04424657", "Access Bank"],
-        ["Marvellous Ibironke", "06547857", "Sterling Bank"],
-    ])
+    const [accounts, setAccounts] = useState(
+        [])
+
+    useEffect(() => {
+        async function fetchData() {
+            const { data } = await axios.get(`mono/accounts`);
+            setAccounts(data.accounts)
+        }
+
+        fetchData()
+    }, [accounts]); // Or [] if effect doesn't need props or stat
+
+
     const loggedInUser = localStorage.getItem("user");
     let name = " "
     if (loggedInUser) {
@@ -19,6 +29,7 @@ export default function MainContent(props) {
     const [username, setUsername] = useState(name);
 
     return (
+        <div className="mainbody">
         <main className="mainContent pageColumn">
             <motion.h1 
               className="mainHeader"
@@ -49,6 +60,11 @@ export default function MainContent(props) {
                     delay: 0.1
                 }}
             ></motion.div>
+            <h1 className="mainHeader">Welcome {username}</h1>
+            <div className="welcomeContent">
+                <h3 className="welcomeContent__text">We've done the dirty work for you. Have a look at your recent money moves.</h3>
+                <img className="formImg" src={require('../images/moneyhome.png').default} alt="money and coins" />
+            </div>
             <section className="accountSection">
                 <motion.h2 
                   className="accountsSectionTitle"
@@ -96,7 +112,7 @@ export default function MainContent(props) {
                     }}
                   >
                     <tbody>
-                        {accounts.map(account => <AccountRow accName={account[0]} accNumber={account[1]} bankName={account[2]} key={accounts.indexOf(account)} />)}
+                        {accounts.map(account => <AccountRow accNumber={account.accountNumber} bankName={account.bank} accBalance={account.balance} key={accounts.indexOf(account)} />)}
                     </tbody>
                 </motion.table>
             </section>
@@ -147,10 +163,21 @@ export default function MainContent(props) {
                     delay: 1.1
                 }}
               >
+                    <Mono />
+                </table>
+            </section>
+            <section className="insightSection">
+                <h2 className="insightsSectionTitle">Personal Insight</h2>
+
+                <p className="seeMoreSection"><Link to="/insight">see more</Link></p>
+
+                <div className="insightsInfoContainer">
+
                     <p>During October, your financial activities spike up</p>
                     <p>You spend more on paying debts</p>
                 </motion.div>
             </section>
         </main>
+        </div>
     );
 }
