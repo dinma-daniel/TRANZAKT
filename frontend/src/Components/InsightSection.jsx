@@ -9,7 +9,7 @@ export default function InsightSection(props) {
                 </section>
             </header>
             <section className="mainInsightSection">
-                <p>Here are some things we noticed while handling working with your finance</p>
+                <p>Here are some things we noticed while working with your finance</p>
                 <div className="insightCarousel"></div>
             </section>
         </div>

@@ -8,7 +8,7 @@ import SubscriptionSection from './SubscriptionSection';
 import Mono from "./mono";
 
 
-// main
+
 export default function WelcomePage(props) {
     const loggedInUser = localStorage.getItem("user");
     if (!loggedInUser) {
@@ -24,7 +24,7 @@ export default function WelcomePage(props) {
              <Mono />
 
             
-// main
+
         </div>
             </>
     );

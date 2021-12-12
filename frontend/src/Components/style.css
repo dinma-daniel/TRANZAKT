@@ -434,7 +434,6 @@ select {
   background-color: #ffddc4;
 }
 
-
 /* Styles for the insight column */
 .insightColumn {
   width: calc(100vw - 180px);
@@ -472,12 +471,11 @@ select {
   height: 380px;
   background-color: #fff0f0;
   border-radius: 15px;
-
+}
 .mono__btn {
   background-color: #feb062;
   border-radius: 5px;
   border: none;
   padding: 1rem;
   color: white;
-
 }

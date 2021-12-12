@@ -5,7 +5,7 @@ import AccountRow from "./AccountRow";
 import { Link } from "react-router-dom";
 
 import Mono from "./mono";
-// main
+
 
 export default function MainContent(props) {
     const [accounts, setAccounts] = useState(
@@ -51,9 +51,6 @@ export default function MainContent(props) {
 
                 <p className="seeMoreSection"><Link to="/insight">see more</Link></p>
 
-                <p className="seeMoreSection">see more</p>
-
-// main
                 <div className="insightsInfoContainer">
                     <p>During October, your financial activities spike up</p>
                     <p>You spend more on paying debts</p>
