@@ -1,16 +1,18 @@
 /* Importing the fonts for the project */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 body {
   margin: 0;
   box-sizing: border-box;
   width: 100vw;
+  overflow-x: hidden;
 }
 /* Styles for the signUp page */
 .signUpContainer {
   padding: 15px;
   text-align: left;
   background-color: #fff0f0;
+  height: 100vh;
 }
 .signUpHeader {
   color: black;
@@ -24,9 +26,13 @@ body {
 }
 .signInBold {
   font-weight: 600;
+  color: #df7000;
 }
 /* Styles for the Sign Up Form */
-
+.signUpForm {
+  /* max-width: 100vw; */
+  width: 100%;
+}
 .formInput {
   padding: 24px 17px;
   border-radius: 15px;
@@ -43,17 +49,37 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.formButton {
+  width: 55%;
+}
+
+@media screen and (max-width: 720px) {
+  .usersNames {
+    width: calc(100% - 35px);
+  }
+}
 .usersNames .name {
   max-width: 34%;
 }
 .formInput.fullSize {
   width: calc(100% - 35px);
 }
+@media screen and (max-width: 720px) {
+  .formInput.fullSize {
+    width: calc(100% - 70px);
+  }
+}
 .formButton {
   border: 0;
   padding: 25px 100px;
   border-radius: 15px;
   background-color: #feb062;
+}
+@media screen and (max-width: 720px) {
+  .formButton {
+    width: calc(100% - 35px);
+  }
 }
 .formButton:focus {
   outline: 0;
@@ -70,14 +96,18 @@ body {
   .formImageContainer {
     display: none;
   }
+  .signUpContainer {
+    width: 100%;
+  }
 }
 .formImage {
   width: 40%;
-  max-width: 400px;
+  max-width: 500px;
 }
 /* Styles for the signUpPage */
 .signUpPage {
   max-width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -89,3 +119,267 @@ body {
   }
 }
 
+/* Styles for the welcome page grid */
+.welcomePage {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 180px calc(100vw - 560px) 380px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+.pageColumn {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* Styles for the SideNav Component */
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  text-align: left;
+  border-right: 2px solid #cfcfcf;
+}
+.brandName {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  margin-top: 0;
+}
+.navItems {
+  list-style-type: none;
+  padding: 0;
+}
+.navItem {
+  margin-bottom: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.navItemImage {
+  width: 25px;
+  margin-right: 8px;
+}
+/* Styles for the MainContent Page */
+.mainContent {
+  padding: 60px 30px 40px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.mainHeader {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.welcomeContent {
+  height: 200px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #33cbcf;
+  margin-bottom: 60px;
+}
+.accountsSectionTitle,
+.insightsSectionTitle {
+  font-size: 20px;
+  font-weight: sans-serif;
+  margin-bottom: 6px;
+}
+.seeMoreSection {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.accountsTableContainer {
+  border-spacing: 0 25px;
+  padding: 0px 70px;
+}
+.insightsInfoContainer {
+  min-height: 200px;
+}
+.accountsTableContainer,
+.insightsInfoContainer {
+  width: 100%;
+  border: 2px solid #ffddc4;
+  border-radius: 15px;
+  font-size: 14px;
+}
+.insightsInfoContainer p {
+  margin: 30px 0px 30px 70px;
+}
+.accName {
+  text-align: left;
+}
+.accNumber {
+  text-align: center;
+}
+.bankNumber {
+  text-align: right;
+}
+.accountRow {
+  margin-bottom: 25px;
+}
+/* Styles for the subscription Section */
+.subscriptionSection {
+  background-color: #fff0f0;
+  padding: 60px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+.iconSection {
+  padding-left: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.subscriptionsHeader {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.subscriptionSection .seeMoreSection {
+  margin-top: 0;
+}
+.subscriptionDetails {
+  width: 100%;
+  border: 2px solid #33cbcf;
+  border-radius: 15px;
+  margin-bottom: 70px;
+  padding: 0 0 0 20px;
+  font-size: 14px;
+  border-spacing: 0 20px;
+}
+.subscriptionDetails th {
+  padding-bottom: 10px;
+}
+.subscriptionDetails th {
+  font-weight: 400;
+  font-size: 14px;
+}
+.billing {
+  font-size: 24px;
+  font-weight: 700;
+}
+.billingImage {
+  width: calc(100% + 40px);
+  position: relative;
+  right: 20px;
+}
+
+
+/* styling for subscription page  */
+
+.sub__body {
+  display: flex;
+  height: 100vh;
+}
+
+.registration {
+  /* border: 1px solid black; */
+  flex: 0.5;
+}
+
+.sub__section {
+  /* border: 1px solid black; */
+  flex: 0.5;
+}
+
+.split__input {
+  /* border: 1px solid black; */
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-between;
+}
+
+.reg__form {
+  display: flex;
+  margin: 0 auto;
+  height: 90vh;
+  width: 80%;
+  /* border: 1px solid black; */
+  text-align: left;
+  justify-content: center;
+}
+
+.sub__duration {
+  width: 25%;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+}
+
+.month {
+  margin-left: 1rem;
+}
+
+.radios {
+  /* border: 1px solid black; */
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.radios input {
+  border: #ffddc4;
+  background-color: #df7000;
+  cursor: pointer;
+}
+
+label {
+  margin-left: 2em;
+}
+
+.reg__header {
+  margin-bottom: 2rem;
+}
+
+/* styling for subscription section  */
+
+.sub__section {
+  background-color: #fff0f0;
+}
+
+.sub__section__body {
+  text-align: left;
+  /* border: 1px solid black; */
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.iconbody {
+  display: flex;
+}
+
+.iconSec__right {
+  flex: 0.2;
+  /* border: 1px solid black; */
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+}
+
+.left {
+  /* border: 1px solid black; */
+  flex: 0.8;
+}
+
+.sub__container {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #33cbcf;
+  padding: 2rem 0;
+  border-radius: 15px;
+}
+
+select {
+  padding: 1.7rem 5rem;
+  border-radius: 15px;
+  margin: 0.5rem 0;
+  border: none;
+  background-color: #ffddc4;
+}
