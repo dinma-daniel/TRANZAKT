@@ -1,4 +1,21 @@
+import axios from "axios";
+
 const SubSection = () => {
+
+    const handleLogOut = async e => {
+        try {
+            e.preventDefault();
+            // send the username and password to the server
+            const { data } = await axios.post(`logout`);
+            localStorage.clear()
+            window.location.href = "/login"
+        }
+        catch (e) {
+            // this should appear as a dropdown indicating the error 
+            console.log(e.response.data.message)
+            console.log(e)
+        }}
+
     return ( 
         <div className="sub__section">
             <div className="sub__section__body">
@@ -8,7 +25,7 @@ const SubSection = () => {
 </div>
             <div className="iconSec__right">
                 <img className="iconSectionIcon" src={require('../images/Notification.png').default}/>
-                <img className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default}/>
+             <button>   <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default}/></button>
             </div>
             
             </div>
@@ -26,3 +43,4 @@ const SubSection = () => {
 }
  
 export default SubSection;
+
