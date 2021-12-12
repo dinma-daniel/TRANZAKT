@@ -15,17 +15,12 @@ export default function WelcomePage(props) {
         window.location.href = "/"
     }
     return (<>
-            
-            <SideNav />
+
+        <SideNav />
         <div className="welcomePage">
             <MainContent />
             <SubscriptionSection />
-
-             <Mono />
-
-            
-
         </div>
-            </>
+    </>
     );
 }
