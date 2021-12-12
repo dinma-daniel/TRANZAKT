@@ -14,33 +14,34 @@ const SubSection = () => {
             // this should appear as a dropdown indicating the error 
             console.log(e.response.data.message)
             console.log(e)
-        }}
+        }
+    }
 
-    return ( 
+    return (
         <div className="sub__section">
             <div className="sub__section__body">
                 <div className="iconbody">
-                <div className="left">
+                    <div className="left">
 
-</div>
-            <div className="iconSec__right">
-                <img className="iconSectionIcon" src={require('../images/Notification.png').default}/>
-             <button>   <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default}/></button>
-            </div>
-            
-            </div>
-            <h3>Subscriptions</h3>
-           
-            <div className="sub__container">
-                <h4>Sub Name</h4>
-                <h4>Desccription</h4>
-                <h4>Start Date</h4>
-                <h4>End Date</h4>
-            </div>
+                    </div>
+                    <div className="iconSec__right">
+                        <img className="iconSectionIcon" src={require('../images/Notification.png').default} />
+                        <button>   <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
+                    </div>
+
+                </div>
+                <h3>Subscriptions</h3>
+
+                <div className="sub__container">
+                    <h4>Sub Name</h4>
+                    <h4>Desccription</h4>
+                    <h4>Start Date</h4>
+                    <h4>End Date</h4>
+                </div>
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default SubSection;
 

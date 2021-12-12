@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AccountRow from "./AccountRow";
 import Mono from "./mono";
 
 export default function MainContent(props) {
-    const [accounts, setAccounts] = useState([
-        ["01234677", "GT Bank", "1011"],
-        ["04424657", "Access Bank", "10000"],
-        ["06547857", "Sterling Bank", "20000"],
-    ])
+    const [accounts, setAccounts] = useState(
+        [])
+
+    useEffect(() => {
+        async function fetchData() {
+            const { data } = await axios.get(`mono/accounts`);
+            setAccounts(data.accounts)
+        }
+
+        fetchData()
+    }, [accounts]); // Or [] if effect doesn't need props or stat
+
+
     const loggedInUser = localStorage.getItem("user");
     let name = " "
     if (loggedInUser) {
@@ -29,7 +37,7 @@ export default function MainContent(props) {
                 <p className="seeMoreSection">see more</p>
                 <table className="accountsTableContainer">
                     <tbody>
-                        {accounts.map(account => <AccountRow accNumber={account[0]} bankName={account[1]} accBalance={account[2]} key={accounts.indexOf(account)} />)}
+                        {accounts.map(account => <AccountRow accNumber={account.accountNumber} bankName={account.bank} accBalance={account.balance} key={accounts.indexOf(account)} />)}
                     </tbody>
                     <Mono />
                 </table>
