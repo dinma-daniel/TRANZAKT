@@ -5,9 +5,9 @@ import Mono from "./mono";
 
 export default function MainContent(props) {
     const [accounts, setAccounts] = useState([
-        ["Ronald Dosunmu", "01234677", "GT Bank"],
-        ["Dinma Okonicha", "04424657", "Access Bank"],
-        ["Marvellous Ibironke", "06547857", "Sterling Bank"],
+        ["01234677", "GT Bank", "1011"],
+        ["04424657", "Access Bank", "10000"],
+        ["06547857", "Sterling Bank", "20000"],
     ])
     const loggedInUser = localStorage.getItem("user");
     let name = " "
@@ -22,14 +22,14 @@ export default function MainContent(props) {
             <h1 className="mainHeader">Welcome {username}</h1>
             <div className="welcomeContent">
                 <h3 className="welcomeContent__text">We've done the dirty work for you. Have a look at your recent money moves.</h3>
-                <img className="formImg" src={require('../images/moneyhome.png').default} alt="money and coins"/>
+                <img className="formImg" src={require('../images/moneyhome.png').default} alt="money and coins" />
             </div>
             <section className="accountSection">
                 <h2 className="accountsSectionTitle">Your Accounts</h2>
                 <p className="seeMoreSection">see more</p>
                 <table className="accountsTableContainer">
                     <tbody>
-                        {accounts.map(account => <AccountRow accName={account[0]} accNumber={account[1]} bankName={account[2]} key={accounts.indexOf(account)} />)}
+                        {accounts.map(account => <AccountRow accNumber={account[0]} bankName={account[1]} accBalance={account[2]} key={accounts.indexOf(account)} />)}
                     </tbody>
                     <Mono />
                 </table>
@@ -37,6 +37,7 @@ export default function MainContent(props) {
             <section className="insightSection">
                 <h2 className="insightsSectionTitle">Personal Insight</h2>
                 <p className="seeMoreSection">see more</p>
+
                 <div className="insightsInfoContainer">
                     <p>During October, your financial activities spike up</p>
                     <p>You spend more on paying debts</p>
