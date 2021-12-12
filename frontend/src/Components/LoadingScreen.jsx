@@ -52,7 +52,7 @@ export default function LoadingScreen(props) {
                 }}
                 onAnimationComplete={
                     setTimeout(() => {
-                        props.history.replace('/')
+                        props.history.replace('/login')
                     }, 8000)
                     
                 }

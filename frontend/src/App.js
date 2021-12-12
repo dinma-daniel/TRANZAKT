@@ -15,12 +15,12 @@ function App() {
     <Router>
       <div className="App">
       <Switch>
-          <Route path="/loader" component={LoadingScreen}/>
           <Route path="/signup" component={SignUpPage} />
           <Route path="/insight" component={PersonalInsightPage} />
           <Route path="/welcome" component={WelcomePage} />
           <Route path="/subscription" component={Subscription} />
-          <Route path="/" component={SignIn} />
+          <Route path="/login" component={SignIn} />
+          <Route path="/" component={LoadingScreen}/>
       </Switch>
       </div>
     </Router>

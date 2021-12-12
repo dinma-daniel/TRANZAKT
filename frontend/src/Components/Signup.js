@@ -17,7 +17,7 @@ export default function SignUp(props) {
 
       const { data } = await axios.post(`signup`, user);
 
-      window.location.href = "/"
+      window.location.href = "/login"
     }
     catch (e) {
       // this should appear as a dropdown indicating the error 

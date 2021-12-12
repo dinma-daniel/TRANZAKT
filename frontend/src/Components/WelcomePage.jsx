@@ -8,7 +8,7 @@ import SubscriptionSection from './SubscriptionSection';
 export default function WelcomePage(props) {
     const loggedInUser = localStorage.getItem("user");
     if (!loggedInUser) {
-        window.location.href = "/"
+        window.location.href = "/login"
     }
     return (<>
             
