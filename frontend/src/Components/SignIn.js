@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import {motion} from 'framer-motion';
 const SignIn = () => {
 
     const [email, setEmail] = useState("");
@@ -26,11 +26,61 @@ const SignIn = () => {
 
     return (
         <div className="signin__body">
-            <div className="lefthand">
-            <img className="formImage" src={require('../images/coins.png').default} alt="money and coins"/> 
-            </div>
-            <div className="righthand">
-                <div className='right__container'>
+            <motion.div className="lefthand"
+            initial={{
+                backgroundColor: '#ffffff'
+            }}
+            animate={{
+                backgroundColor: '#f5f8ff'
+            }}
+            transition={{
+                duration: 0.5
+            }}
+            >
+            <motion.img 
+              className="formImage" 
+              src={require('../images/coins.png').default} 
+              alt="money and coins"
+              initial={{
+                  scale: 0.8, 
+                  opacity: 0, 
+                  y: 100
+              }}
+              animate={{
+                  scale: 1, 
+                  opacity: 1, 
+                  y: 0
+              }}
+              transition={{
+                  delay: 0.5
+              }}
+              /> 
+            </motion.div>
+            <motion.div 
+              className="righthand"
+              initial={{
+                  backgroundColor: "#ffffff"
+              }}
+              animate={{
+                  backgroundColor: '#fff0f0'
+              }}
+              transition={{
+                  duration: 0.5
+              }}
+              >
+                <motion.div 
+                  className='right__container'
+                  initial={{
+                      opacity: 0
+                  }}
+                  animate={{
+                      opacity: 1
+                  }}
+                  transition={{
+                      delay: 0.5, 
+                      duration: 0.5
+                  }}
+                  >
                     <h1 className='title'>Sign in to BRAND</h1>
                     <h4 className='subtitle'>Dont have an account?  <Link to="/signup"> <b>Sign up</b></Link></h4>
 
@@ -54,8 +104,8 @@ const SignIn = () => {
                             <button className="formBtn">Enter</button>
                         </form>
                     </div>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </div>
     );
 }

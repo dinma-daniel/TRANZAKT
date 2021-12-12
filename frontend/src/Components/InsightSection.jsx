@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion';
 export default function InsightSection(props) {
     return (
         <div className="insightColumn pageColumn">
@@ -8,10 +9,24 @@ export default function InsightSection(props) {
                     <button> <img onClick={() => props.history.replace('/welcome')} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
                 </section>
             </header>
-            <section className="mainInsightSection">
+            <motion.section 
+              className="mainInsightSection"
+              initial={{
+                  opacity: 0, 
+                  scale: 0.9
+              }}
+              animate={{
+                  opacity: 1, 
+                  scale: 1
+              }}
+              transition={{
+                  duration: 0.6, 
+                  delay: 0.5
+              }}
+              >
                 <p>Here are some things we noticed while handling working with your finance</p>
                 <div className="insightCarousel"></div>
-            </section>
+            </motion.section>
         </div>
     );
 }

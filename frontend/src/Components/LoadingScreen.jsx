@@ -3,7 +3,14 @@ import {motion} from 'framer-motion';
 export default function LoadingScreen(props) {
     return (
         <div className="loaderPage">
-            <div className="loaderContainer">
+            <motion.div 
+              className="loaderContainer"
+              animate={{
+                  opacity: 0
+              }}
+              transition={{
+                  delay: 6.5
+              }}>
                 <motion.img
                 className="logo"
                 src={require('../images/2.svg').default}
@@ -57,7 +64,7 @@ export default function LoadingScreen(props) {
                     
                 }
                 />
-            </div>
+            </motion.div>
         </div>
     );
 }

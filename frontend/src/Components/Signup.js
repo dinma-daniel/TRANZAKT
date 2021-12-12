@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 export default function SignUp(props) {
   const [email, setEmail] = useState("");
@@ -28,7 +29,19 @@ export default function SignUp(props) {
   };
 
   return (
-    <div className="signUpContainer">
+    <motion.div 
+      className="signUpContainer"
+      initial={{
+          opacity: 0
+      }}
+      animate={{
+          opacity: 1
+      }}
+      transition={{
+          delay: 0.5, 
+          duration: 0.5
+      }}
+      >
       <header className="signUpHeader">Sign up on BRAND</header>
       <p className="signInSection">
         <span>Have an account? </span>
@@ -74,6 +87,6 @@ export default function SignUp(props) {
        */}
         <button type="submit" className="formButton">Enter</button>
       </form>
-    </div>
+    </motion.div>
   );
 }

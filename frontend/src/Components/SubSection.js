@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion';
 const SubSection = (props) => {
     return ( 
         <div className="sub__section">
@@ -14,12 +15,24 @@ const SubSection = (props) => {
             </div>
             <h3>Subscriptions</h3>
            
-            <div className="sub__container">
+            <motion.div className="sub__container"
+            initial={{
+                opacity: 0, 
+                    y: 100
+                }}
+                animate={{
+                    opacity: 1, 
+                    y: 0
+                }}
+                transition={{
+                    delay: 0.6
+                }}
+            >
                 <h4>Sub Name</h4>
                 <h4>Desccription</h4>
                 <h4>Start Date</h4>
                 <h4>End Date</h4>
-            </div>
+            </motion.div>
             </div>
         </div>
      );

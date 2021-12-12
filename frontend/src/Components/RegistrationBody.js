@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {motion} from 'framer-motion';
 
 const RegistrationBody = () => {
     const [isTrialPayment, setIsTrialPayment] = useState(false);
@@ -8,7 +9,18 @@ const RegistrationBody = () => {
     }
     return ( 
         <div className="registration">
-            <form className="reg__form">
+            <motion.form className="reg__form"
+            initial={{
+                opacity: 0, 
+                y: 100
+            }}
+            animate={{
+                opacity: 1, 
+                y: 0
+            }}
+            transition={{
+                delay: 0.4
+            }}>
             <h2 className="reg__header">Register Subscriptions</h2>
             <input
                     type="email"
@@ -99,7 +111,7 @@ const RegistrationBody = () => {
                     }
                     <br/>
                     <button className="formBtn">Enter</button>
-            </form>
+            </motion.form>
         </div>
      );
 }
