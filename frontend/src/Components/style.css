@@ -181,6 +181,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .mainHeader {
   font-size: 30px;
   font-weight: 600;
@@ -193,7 +194,26 @@ body {
   border-radius: 15px;
   background-color: #33cbcf;
   margin-bottom: 60px;
+  display: flex;
 }
+
+.formImg {
+  /* border: 1px solid black; */
+  height: 100%;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.welcomeContent__text {
+  /* border: 1px solid black; */
+  font-size: xx-large;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .accountsSectionTitle,
 .insightsSectionTitle {
   font-size: 20px;
@@ -235,6 +255,7 @@ body {
 }
 .accountRow {
   margin-bottom: 25px;
+  overflow-y: scroll;
 }
 /* Styles for the subscription Section */
 .subscriptionSection {
@@ -413,6 +434,7 @@ select {
   background-color: #ffddc4;
 }
 
+
 /* Styles for the insight column */
 .insightColumn {
   width: calc(100vw - 180px);
@@ -450,4 +472,12 @@ select {
   height: 380px;
   background-color: #fff0f0;
   border-radius: 15px;
+
+.mono__btn {
+  background-color: #feb062;
+  border-radius: 5px;
+  border: none;
+  padding: 1rem;
+  color: white;
+
 }
