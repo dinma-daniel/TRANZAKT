@@ -1,8 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function InsightSection(props) {
+    const [accounts, setAccounts] = useState(
+        [])
+
+    useEffect(() => {
+        async function fetchData() {
+            const { data } = await axios.get(`mono/accounts`);
+            setAccounts(data.accounts)
+        }
+
+        fetchData()
+    }, [accounts]); // Or [] if effect doesn't need props or stat
+
+
     const handleLogOut = async e => {
         try {
             e.preventDefault();
@@ -29,8 +42,12 @@ export default function InsightSection(props) {
             </header>
             <section className="mainInsightSection">
                 <p>Here are some things we noticed while working with your finance</p>
-                <div className="insightCarousel"></div>
-            </section>
-        </div>
+                <div className="insightCarousel">
+                    <h1>
+                        {accounts.map(account => <p>For Account: {account.accountNumber}  <br /> Total credit is: {account.credit} <br />Total debit is: {account.debit} <br />Estimated income is: {account.income} </p>
+                        )} </h1>
+                </div>
+            </section >
+        </div >
     );
 }
