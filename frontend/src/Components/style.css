@@ -261,6 +261,9 @@ body {
   width: 24px;
   height: 24px;
 }
+.iconSectionIcon:hover {
+  cursor: pointer;
+}
 .subscriptionsHeader {
   font-size: 20px;
   font-weight: 600;

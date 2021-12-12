@@ -1,13 +1,13 @@
 import SideNav from "./SideNav"
 import RegistrationBody from "./RegistrationBody";
 import SubSection from "./SubSection";
-const Subscription = () => {
+const Subscription = (props) => {
     return ( 
     <>
             <SideNav />
         <div className="sub__body">
             <RegistrationBody />
-            <SubSection />
+            <SubSection history={props.history}/>
         </div>
     </>
      );

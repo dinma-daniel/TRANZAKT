@@ -1,4 +1,4 @@
-const SubSection = () => {
+const SubSection = (props) => {
     return ( 
         <div className="sub__section">
             <div className="sub__section__body">
@@ -8,7 +8,7 @@ const SubSection = () => {
 </div>
             <div className="iconSec__right">
                 <img className="iconSectionIcon" src={require('../images/Notification.png').default}/>
-                <img className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default}/>
+                <img className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} onClick={() => props.history.replace('/welcome')}/>
             </div>
             
             </div>
