@@ -3,12 +3,18 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function InsightSection(props) {
+
     const [accounts, setAccounts] = useState(
         [])
 
     useEffect(() => {
         async function fetchData() {
             const { data } = await axios.get(`mono/accounts`);
+
+            if (data.length === 0) {
+                alert("please link your account before you can get insight");
+                window.location.href = "/welcome"
+            }
             setAccounts(data.accounts)
         }
 
