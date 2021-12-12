@@ -242,6 +242,14 @@ body {
   justify-content: space-between;
   margin-bottom: 50px;
 }
+.iconSection button {
+  border: 0;
+  background-color: transparent;
+}
+.iconSectionIcon {
+  width: 24px;
+  height: 24px;
+}
 .subscriptionsHeader {
   font-size: 20px;
   font-weight: 600;
