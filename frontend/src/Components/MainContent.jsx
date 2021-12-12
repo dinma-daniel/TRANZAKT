@@ -30,6 +30,7 @@ export default function MainContent(props) {
     const [username, setUsername] = useState(name);
 
     return (
+        <div className="mainbody">
         <main className="mainContent pageColumn">
             <h1 className="mainHeader">Welcome {username}</h1>
             <div className="welcomeContent">
@@ -57,5 +58,6 @@ export default function MainContent(props) {
                 </div>
             </section>
         </main>
+        </div>
     );
 }

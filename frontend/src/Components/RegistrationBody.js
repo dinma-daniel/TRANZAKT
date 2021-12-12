@@ -36,7 +36,9 @@ const RegistrationBody = () => {
                     placeholder="Amount"
                 />
                 <br />
-
+<label className='sart__of__sub'>
+    Start of subscription/billing
+    </label>
                 <input
                     className="start_of_sub"
                     type="date"
@@ -47,7 +49,7 @@ const RegistrationBody = () => {
                 <select name="account" id="">
                     <option value="account1">Select Account</option>
                     {/* <option value="account1">Account 1</option> */}
-                    {accounts.map(account => <option> {account.accountNumber} {account.bank} {account.bank}</option>)}
+                    {accounts.map(account => <option> {account.accountNumber} {account.bank} </option>)}
                 </select>
                 <br />
                 <h3 className="">Is subscription/billing trial payment?</h3>

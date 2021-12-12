@@ -15,7 +15,7 @@ export default function SideNav(props) {
                 </li>
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/Download_circle_light.png').default} />
-                    <span>Personal Insight</span>
+                    <Link to='/insight'><span>Personal Insight</span></Link>
                 </li>
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/Scan_alt_light.png').default} />
