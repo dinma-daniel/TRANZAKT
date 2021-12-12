@@ -8,12 +8,14 @@ import SignUpPage from './Components/SignUpPage';
 import WelcomePage from './Components/WelcomePage';
 import Subscription from "./Components/Subscription";
 import PersonalInsightPage from './Components/PersonalInsightPage';
+import LoadingScreen from './Components/LoadingScreen';
 
 function App() {
   return (
     <Router>
       <div className="App">
       <Switch>
+          <Route path="/loader" component={LoadingScreen}/>
           <Route path="/signup" component={SignUpPage} />
           <Route path="/insight" component={PersonalInsightPage} />
           <Route path="/welcome" component={WelcomePage} />
