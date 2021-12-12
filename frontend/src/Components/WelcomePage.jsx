@@ -10,12 +10,14 @@ export default function WelcomePage(props) {
     if (!loggedInUser) {
         window.location.href = "/"
     }
-    return (
-        <div className="welcomePage">
+    return (<>
+            
             <SideNav />
+        <div className="welcomePage">
             <MainContent />
             <SubscriptionSection />
             {/* <Mono /> */}
         </div>
+            </>
     );
 }

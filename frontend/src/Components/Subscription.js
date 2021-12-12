@@ -3,12 +3,13 @@ import RegistrationBody from "./RegistrationBody";
 import SubSection from "./SubSection";
 const Subscription = () => {
     return ( 
-        <div className="sub__body">
-          
+    <>
             <SideNav />
+        <div className="sub__body">
             <RegistrationBody />
             <SubSection />
         </div>
+    </>
      );
 }
  

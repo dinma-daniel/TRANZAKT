@@ -129,11 +129,12 @@ body {
 /* Styles for the welcome page grid */
 .welcomePage {
   display: grid;
-  width: 100vw;
+  width: calc(100vw - 180px);
   height: 100vh;
-  grid-template-columns: 180px calc(100vw - 560px) 380px;
+  grid-template-columns: calc(100vw - 560px) 380px;
   text-align: left;
   font-family: "Montserrat", sans-serif;
+  margin-left: 180px;
 }
 .pageColumn {
   padding-top: 60px;
@@ -141,11 +142,17 @@ body {
 }
 /* Styles for the SideNav Component */
 .sideNav {
+  position: fixed;
+  background-color: white;
+  left: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   padding-left: 25px;
   text-align: left;
   border-right: 2px solid #cfcfcf;
+  padding-right: 28px;
 }
 .brandName {
   font-size: 24px;
@@ -246,6 +253,9 @@ body {
   border: 0;
   background-color: transparent;
 }
+.iconSection button:hover {
+  cursor: pointer;
+}
 .iconSectionIcon {
   width: 24px;
   height: 24px;
@@ -289,6 +299,7 @@ body {
 .sub__body {
   display: flex;
   height: 100vh;
+  margin-left: 160px;
 }
 
 .registration {
