@@ -501,6 +501,7 @@ select {
 /* Style for the bold part of the tranzakt logo */
 .boldLetters {
   font-weight: 800;
+}
 .mono__btn {
   background-color: #feb062;
   border-radius: 5px;

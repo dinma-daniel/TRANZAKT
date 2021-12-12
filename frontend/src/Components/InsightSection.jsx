@@ -1,4 +1,4 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -47,32 +47,27 @@ export default function InsightSection(props) {
                     <button> <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
                 </section>
             </header>
-            <motion.section 
-              className="mainInsightSection"
-              initial={{
-                  opacity: 0, 
-                  scale: 0.9
-              }}
-              animate={{
-                  opacity: 1, 
-                  scale: 1
-              }}
-              transition={{
-                  duration: 0.6, 
-                  delay: 0.5
-              }}
-              >
+            <motion.section
+                className="mainInsightSection"
+                initial={{
+                    opacity: 0,
+                    scale: 0.9
+                }}
+                animate={{
+                    opacity: 1,
+                    scale: 1
+                }}
+                transition={{
+                    duration: 0.6,
+                    delay: 0.5
+                }}
+            >
                 <p>Here are some things we noticed while handling working with your finance</p>
-                <div className="insightCarousel"></div>
+                <div className="insightCarousel">   <h1>
+                    {accounts.map(account => <p>For Account: {account.accountNumber}  <br /> Total credit is: {account.credit} <br />Total debit is: {account.debit} <br />Estimated income is: {account.income} </p>
+                    )} </h1></div>
             </motion.section>
-            <section className="mainInsightSection">
-                <p>Here are some things we noticed while working with your finance</p>
-                <div className="insightCarousel">
-                    <h1>
-                        {accounts.map(account => <p>For Account: {account.accountNumber}  <br /> Total credit is: {account.credit} <br />Total debit is: {account.debit} <br />Estimated income is: {account.income} </p>
-                        )} </h1>
-                </div>
-            </section >
+
         </div >
 
     );
