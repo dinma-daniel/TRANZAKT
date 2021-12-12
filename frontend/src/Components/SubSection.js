@@ -1,10 +1,6 @@
-
-const SubSection = (props) => {
-    return ( 
-
 import axios from "axios";
-
-const SubSection = () => {
+const SubSection = (props) => {
+    
 
     const handleLogOut = async e => {
         try {
@@ -19,10 +15,10 @@ const SubSection = () => {
             console.log(e.response.data.message)
             console.log(e)
         }
+    
     }
-
     return (
-//  main
+
         <div className="sub__section">
             <div className="sub__section__body">
                 <div className="iconbody">
@@ -45,22 +41,8 @@ const SubSection = () => {
                 <h4>End Date</h4>
             </div>
 
-                    </div>
-                    <div className="iconSec__right">
-                        <img className="iconSectionIcon" src={require('../images/Notification.png').default} />
-                        <button>   <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
-                    </div>
+                 
 
-                </div>
-                <h3>Subscriptions</h3>
-
-                <div className="sub__container">
-                    <h4>Sub Name</h4>
-                    <h4>Desccription</h4>
-                    <h4>Start Date</h4>
-                    <h4>End Date</h4>
-                </div>
-// main
             </div>
         </div>
     );
