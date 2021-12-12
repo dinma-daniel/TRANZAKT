@@ -36,9 +36,9 @@ const SubSection = (props) => {
            
             <div className="sub__container">
                 <h4>Sub Name</h4>
-                <h4>Desccription</h4>
+                <h4>Amount</h4>
                 <h4>Start Date</h4>
-                <h4>End Date</h4>
+                <h4>Next Reminder</h4>
             </div>
 
                  

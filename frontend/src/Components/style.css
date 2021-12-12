@@ -194,6 +194,8 @@ body {
   border-radius: 15px;
   background-color: #33cbcf;
   margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
 }
 
@@ -212,6 +214,11 @@ body {
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+.mainbody {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .accountsSectionTitle,
