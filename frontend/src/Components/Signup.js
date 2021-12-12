@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 export default function SignUp(props) {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ export default function SignUp(props) {
 
       const { data } = await axios.post(`signup`, user);
 
-      window.location.href = "/"
+      window.location.href = "/login"
     }
     catch (e) {
       // this should appear as a dropdown indicating the error 
@@ -28,11 +29,23 @@ export default function SignUp(props) {
   };
 
   return (
-    <div className="signUpContainer">
-      <header className="signUpHeader">Sign up on BRAND</header>
+    <motion.div 
+      className="signUpContainer"
+      initial={{
+          opacity: 0
+      }}
+      animate={{
+          opacity: 1
+      }}
+      transition={{
+          delay: 0.5, 
+          duration: 0.5
+      }}
+      >
+      <header className="signUpHeader">Sign up on tranz<span className="boldLetters">akt</span></header>
       <p className="signInSection">
         <span>Have an account? </span>
-        <Link to="/">
+        <Link to="/login">
           <span className="signInBold">Sign in</span>
         </Link>
       </p>
@@ -74,6 +87,6 @@ export default function SignUp(props) {
        */}
         <button type="submit" className="formButton">Enter</button>
       </form>
-    </div>
+    </motion.div>
   );
 }

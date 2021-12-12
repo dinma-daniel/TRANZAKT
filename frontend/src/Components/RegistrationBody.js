@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion';
 import { useState, useEffect } from 'react';
 import axios from "axios";
 
@@ -21,6 +22,19 @@ const RegistrationBody = () => {
     }, [accounts]);
     return (
         <div className="registration">
+            <motion.form className="reg__form"
+            initial={{
+                opacity: 0, 
+                y: 100
+            }}
+            animate={{
+                opacity: 1, 
+                y: 0
+            }}
+            transition={{
+                delay: 0.4
+            }}>
+            <h2 className="reg__header">Register Subscriptions</h2>
             <form className="reg__form">
                 <h2 className="reg__header">Register Subscriptions</h2>
 
@@ -110,10 +124,12 @@ const RegistrationBody = () => {
                         />
                         <h3 className="month">Months</h3>
                     </div>
-                </>
-                }
-                <br />
-                <button className="formBtn">Enter</button>
+                    </>
+                    }
+                    <br/>
+                    <button className="formBtn">Enter</button>
+            </motion.form>
+        
             </form>
         </div>
     );

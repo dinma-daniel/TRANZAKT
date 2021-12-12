@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import SubscriptionSectionRow from './SubscriptionSectionRow';
+import {motion} from 'framer-motion';
 
 export default function SubscriptionSection(props) {
     const [subscriptions, setSubscriptions] = useState([
@@ -32,11 +33,36 @@ export default function SubscriptionSection(props) {
                 <img className="iconSectionIcon" src={require('../images/Notification.png').default} />
                 <button> <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
             </section>
-            <h2 className="subscriptionsHeader">Subscriptions</h2>
+            <motion.h2 
+            className="subscriptionsHeader"
+            initial={{
+                opacity: 0
+            }}
+            animate={{
+                opacity: 1
+            }}
+            transition={{
+                duration: 0.6
+            }}
+            >Subscriptions</motion.h2>
             <Link to="/subscription">
                 <p className="seeMoreSection">see more</p>
             </Link>
-            <table className="subscriptionDetails">
+            <motion.table 
+              className="subscriptionDetails"
+              initial={{
+                    opacity: 0, 
+                    y: 100
+                }}
+                animate={{
+                    opacity: 1, 
+                    y: 0
+                }}
+                transition={{
+                    duration: 0.6, 
+                    delay: 0.6
+                }}
+              >
                 <thead>
                     <tr>
                         <th>Subs Made</th>
@@ -46,9 +72,35 @@ export default function SubscriptionSection(props) {
                 <tbody>
                     {subscriptions.map(subscription => <SubscriptionSectionRow subName={subscription[0]} dueDate={subscription[1]} key={subscriptions.indexOf(subscription)} />)}
                 </tbody>
-            </table>
-            <div className="billing">Keep track of your billing</div>
-            <img className="billingImage" src={require('../images/credit-card.png').default} />
+            </motion.table>
+            <motion.div className="billing"
+            initial={{
+                opacity: 0, 
+                y: 100
+            }}
+            animate={{
+                opacity: 1, 
+                y: 0
+            }}
+            transition={{
+                duration: 0.6, 
+                delay: 0.8
+            }}
+            >Keep track of your billing</motion.div>
+            <motion.img className="billingImage" src={require('../images/credit-card.png').default} 
+            initial={{
+                opacity: 0, 
+                y: 100
+            }}
+            animate={{
+                opacity: 1, 
+                y: 0
+            }}
+            transition={{
+                duration: 0.6, 
+                delay: 1
+            }}
+            />
         </section>
     );
 }

@@ -8,6 +8,7 @@ import SignUpPage from './Components/SignUpPage';
 import WelcomePage from './Components/WelcomePage';
 import Subscription from "./Components/Subscription";
 import PersonalInsightPage from './Components/PersonalInsightPage';
+import LoadingScreen from './Components/LoadingScreen';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route path="/insight" component={PersonalInsightPage} />
           <Route path="/welcome" component={WelcomePage} />
           <Route path="/subscription" component={Subscription} />
-          <Route path="/" component={SignIn} />
+          <Route path="/login" component={SignIn} />
+          <Route path="/" component={LoadingScreen}/>
       </Switch>
       </div>
     </Router>
