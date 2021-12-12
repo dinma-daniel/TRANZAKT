@@ -13,6 +13,9 @@ body {
   text-align: left;
   background-color: #fff0f0;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .signUpHeader {
   color: black;
@@ -101,8 +104,8 @@ body {
   }
 }
 .formImage {
-  width: 40%;
-  max-width: 500px;
+  width: 60%;
+  max-width: 600px;
 }
 /* Styles for the signUpPage */
 .signUpPage {
@@ -115,18 +118,23 @@ body {
 @media screen and (min-width: 720px) {
   .signUpContainer {
     width: 35%;
-    padding: 60px;
+    padding: 60px 60px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 60px);
   }
 }
 
 /* Styles for the welcome page grid */
 .welcomePage {
   display: grid;
-  width: 100vw;
+  width: calc(100vw - 180px);
   height: 100vh;
-  grid-template-columns: 180px calc(100vw - 560px) 380px;
+  grid-template-columns: calc(100vw - 560px) 380px;
   text-align: left;
   font-family: "Montserrat", sans-serif;
+  margin-left: 180px;
 }
 .pageColumn {
   padding-top: 60px;
@@ -134,11 +142,17 @@ body {
 }
 /* Styles for the SideNav Component */
 .sideNav {
+  position: fixed;
+  background-color: white;
+  left: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   padding-left: 25px;
   text-align: left;
   border-right: 2px solid #cfcfcf;
+  padding-right: 28px;
 }
 .brandName {
   font-size: 24px;
@@ -203,8 +217,9 @@ body {
 .accountsSectionTitle,
 .insightsSectionTitle {
   font-size: 20px;
-  font-weight: sans-serif;
+  /* font-weight: sans-serif; */
   margin-bottom: 6px;
+  margin-top: 30px;
 }
 .seeMoreSection {
   text-align: right;
@@ -256,6 +271,20 @@ body {
   justify-content: space-between;
   margin-bottom: 50px;
 }
+.iconSection button {
+  border: 0;
+  background-color: transparent;
+}
+.iconSection button:hover {
+  cursor: pointer;
+}
+.iconSectionIcon {
+  width: 24px;
+  height: 24px;
+}
+.iconSectionIcon:hover {
+  cursor: pointer;
+}
 .subscriptionsHeader {
   font-size: 20px;
   font-weight: 600;
@@ -295,6 +324,7 @@ body {
 .sub__body {
   display: flex;
   height: 100vh;
+  margin-left: 160px;
 }
 
 .registration {
@@ -404,10 +434,50 @@ select {
   background-color: #ffddc4;
 }
 
+
+/* Styles for the insight column */
+.insightColumn {
+  width: calc(100vw - 180px);
+  box-sizing: border-box;
+  margin-left: 180px;
+  padding-left: 45px;
+  padding-right: 45px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+.insightSectionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.insightSectionHeader h1 {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+.insightColumn .iconSection {
+  width: 140px;
+}
+.mainInsightSection {
+  padding-left: 75px;
+}
+.mainInsightSection p {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 65px;
+}
+.insightCarousel {
+  width: calc(100% - 140px);
+  height: 380px;
+  background-color: #fff0f0;
+  border-radius: 15px;
+
 .mono__btn {
   background-color: #feb062;
   border-radius: 5px;
   border: none;
   padding: 1rem;
   color: white;
+
 }
