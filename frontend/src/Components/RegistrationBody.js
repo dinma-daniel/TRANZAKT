@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from "axios";
 
 const RegistrationBody = () => {
     const [isTrialPayment, setIsTrialPayment] = useState(false);
@@ -6,6 +7,18 @@ const RegistrationBody = () => {
         const booleanValue = e.target.value == 'Yes' ? true : false;
         setIsTrialPayment(booleanValue);
     }
+
+    const [accounts, setAccounts] = useState(
+        [])
+
+    useEffect(() => {
+        async function fetchData() {
+            const { data } = await axios.get(`mono/accounts`);
+            setAccounts(data.accounts)
+        }
+
+        fetchData()
+    }, [accounts]);
     return (
         <div className="registration">
             <form className="reg__form">
@@ -33,8 +46,8 @@ const RegistrationBody = () => {
                 <br />
                 <select name="account" id="">
                     <option value="account1">Select Account</option>
-                    <option value="account1">Account 1</option>
-
+                    {/* <option value="account1">Account 1</option> */}
+                    {accounts.map(account => <option> {account.accountNumber} {account.bank} {account.bank}</option>)}
                 </select>
                 <br />
                 <h3 className="">Is subscription/billing trial payment?</h3>
