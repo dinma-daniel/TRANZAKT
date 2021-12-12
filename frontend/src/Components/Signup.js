@@ -42,7 +42,7 @@ export default function SignUp(props) {
           duration: 0.5
       }}
       >
-      <header className="signUpHeader">Sign up on BRAND</header>
+      <header className="signUpHeader">Sign up on tranz<span className="boldLetters">akt</span></header>
       <p className="signInSection">
         <span>Have an account? </span>
         <Link to="/login">

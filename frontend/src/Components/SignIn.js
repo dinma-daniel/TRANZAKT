@@ -81,7 +81,7 @@ const SignIn = () => {
                       duration: 0.5
                   }}
                   >
-                    <h1 className='title'>Sign in to BRAND</h1>
+                    <h1 className='title'>Sign in to tranz<span className="boldLetters">akt</span></h1>
                     <h4 className='subtitle'>Dont have an account?  <Link to="/signup"> <b>Sign up</b></Link></h4>
 
                     <div>

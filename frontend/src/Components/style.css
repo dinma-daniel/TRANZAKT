@@ -469,3 +469,8 @@ select {
     transform: scale(0.7);
   }
 }
+
+/* Style for the bold part of the tranzakt logo */
+.boldLetters {
+  font-weight: 800;
+}

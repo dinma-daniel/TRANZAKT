@@ -1,7 +1,7 @@
 export default function SideNav(props) {
     return (
         <nav className="sideNav pageColumn">
-            <h2 className="brandName">BRAND</h2>
+            <h2 className="brandName">tranz<span className="boldLetters">akt</span></h2>
             <ul className="navItems">
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/darhboard_alt.png').default} />
