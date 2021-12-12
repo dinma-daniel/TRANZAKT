@@ -22,7 +22,7 @@ export default function Mono(props) {
 
   return (
     <div>
-      <button onClick={() => monoConnect.open()}>
+      <button onClick={() => monoConnect.open()} className='mono__btn'>
         Link account with Mono
       </button>
     </div>

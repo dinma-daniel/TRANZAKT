@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import AccountRow from "./AccountRow";
+import Mono from "./mono";
 
 export default function MainContent(props) {
     const [accounts, setAccounts] = useState([
@@ -19,7 +20,10 @@ export default function MainContent(props) {
     return (
         <main className="mainContent pageColumn">
             <h1 className="mainHeader">Welcome {username}</h1>
-            <div className="welcomeContent"></div>
+            <div className="welcomeContent">
+                <h3 className="welcomeContent__text">We've done the dirty work for you. Have a look at your recent money moves.</h3>
+                <img className="formImg" src={require('../images/moneyhome.png').default} alt="money and coins"/>
+            </div>
             <section className="accountSection">
                 <h2 className="accountsSectionTitle">Your Accounts</h2>
                 <p className="seeMoreSection">see more</p>
@@ -27,6 +31,7 @@ export default function MainContent(props) {
                     <tbody>
                         {accounts.map(account => <AccountRow accName={account[0]} accNumber={account[1]} bankName={account[2]} key={accounts.indexOf(account)} />)}
                     </tbody>
+                    <Mono />
                 </table>
             </section>
             <section className="insightSection">
