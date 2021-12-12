@@ -1,7 +1,10 @@
 import SideNav from './SideNav';
 import MainContent from './MainContent';
 import SubscriptionSection from './SubscriptionSection';
-import Mono from "./mono";
+// Commented out the mono import statement because it was causing problems at my end
+// ./src/Components/mono.jsx
+// Module not found: Can't resolve '@mono.co/connect.js' in 'C:\Users\ronal\joeboys\frontend\src\Components'
+// import Mono from "./mono";
 export default function WelcomePage(props) {
     const loggedInUser = localStorage.getItem("user");
     if (!loggedInUser) {
@@ -12,7 +15,7 @@ export default function WelcomePage(props) {
             <SideNav />
             <MainContent />
             <SubscriptionSection />
-            <Mono />
+            {/* <Mono /> */}
         </div>
     );
 }

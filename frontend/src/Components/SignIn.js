@@ -26,7 +26,9 @@ const SignIn = () => {
 
     return (
         <div className="signin__body">
-            <div className="lefthand"></div>
+            <div className="lefthand">
+            <img className="formImage" src={require('../images/coins.png').default} alt="money and coins"/> 
+            </div>
             <div className="righthand">
                 <div className='right__container'>
                     <h1 className='title'>Sign in to BRAND</h1>
