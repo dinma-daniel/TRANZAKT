@@ -1,8 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 const SignIn = () => {
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const { data } = await axios.get(`/bill`);
+            }
+            catch (e) {
+                console.log(e)
+            }
+        }
+
+        fetchData()
+    }, []); // Or [] if effect doesn't need props or stat
+
+
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -28,60 +42,60 @@ const SignIn = () => {
     return (
         <div className="signin__body">
             <motion.div className="lefthand"
-            initial={{
-                backgroundColor: '#ffffff'
-            }}
-            animate={{
-                backgroundColor: '#f5f8ff'
-            }}
-            transition={{
-                duration: 0.5
-            }}
+                initial={{
+                    backgroundColor: '#ffffff'
+                }}
+                animate={{
+                    backgroundColor: '#f5f8ff'
+                }}
+                transition={{
+                    duration: 0.5
+                }}
             >
-            <motion.img 
-              className="formImage" 
-              src={require('../images/coins.png').default} 
-              alt="money and coins"
-              initial={{
-                  scale: 0.8, 
-                  opacity: 0, 
-                  y: 100
-              }}
-              animate={{
-                  scale: 1, 
-                  opacity: 1, 
-                  y: 0
-              }}
-              transition={{
-                  delay: 0.5
-              }}
-              /> 
+                <motion.img
+                    className="formImage"
+                    src={require('../images/coins.png').default}
+                    alt="money and coins"
+                    initial={{
+                        scale: 0.8,
+                        opacity: 0,
+                        y: 100
+                    }}
+                    animate={{
+                        scale: 1,
+                        opacity: 1,
+                        y: 0
+                    }}
+                    transition={{
+                        delay: 0.5
+                    }}
+                />
             </motion.div>
-            <motion.div 
-              className="righthand"
-              initial={{
-                  backgroundColor: "#ffffff"
-              }}
-              animate={{
-                  backgroundColor: '#fff0f0'
-              }}
-              transition={{
-                  duration: 0.5
-              }}
-              >
-                <motion.div 
-                  className='right__container'
-                  initial={{
-                      opacity: 0
-                  }}
-                  animate={{
-                      opacity: 1
-                  }}
-                  transition={{
-                      delay: 0.5, 
-                      duration: 0.5
-                  }}
-                  >
+            <motion.div
+                className="righthand"
+                initial={{
+                    backgroundColor: "#ffffff"
+                }}
+                animate={{
+                    backgroundColor: '#fff0f0'
+                }}
+                transition={{
+                    duration: 0.5
+                }}
+            >
+                <motion.div
+                    className='right__container'
+                    initial={{
+                        opacity: 0
+                    }}
+                    animate={{
+                        opacity: 1
+                    }}
+                    transition={{
+                        delay: 0.5,
+                        duration: 0.5
+                    }}
+                >
                     <h1 className='title'>Sign in to tranz<span className="boldLetters">akt</span></h1>
                     <h4 className='subtitle'>Dont have an account?  <Link to="/signup"> <b>Sign up</b></Link></h4>
 
