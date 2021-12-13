@@ -1,0 +1,17 @@
+{
+    "env": "production",
+    "dbConfig": {
+        "host": "localhost",
+        "database": "mongoose",
+        "port": 27017
+    },
+    "secretKey": "secretKey",
+    "log": {
+        "format": "combined",
+        "dir": "../logs"
+    },
+    "cors": {
+        "origin": "https://focused-hoover-6126ad.netlify.app",
+        "credentials": true
+    }
+}
