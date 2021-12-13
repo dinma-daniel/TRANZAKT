@@ -23,7 +23,7 @@ const SubSection = (props) => {
         }
 
         fetchData()
-    }, [accounts]); // Or [] if effect doesn't need props or stat
+    }, [accounts, subs]); // Or [] if effect doesn't need props or stat
 
 
 
