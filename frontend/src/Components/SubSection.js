@@ -4,6 +4,9 @@ import axios from "axios";
 const SubSection = (props) => {
     const [accounts, setAccounts] = useState(
         [])
+    const [subs, setSubs] = useState(
+        [])
+
 
     useEffect(() => {
         async function fetchData() {
@@ -13,6 +16,10 @@ const SubSection = (props) => {
                 alert("please link your account before you can add subscription");
                 window.location.href = "/welcome"
             }
+
+            const result = await axios.get(`bill`);
+            setSubs(result.data.accounts)
+
         }
 
         fetchData()
@@ -65,10 +72,15 @@ const SubSection = (props) => {
                         delay: 0.6
                     }}
                 >
-                    <h4>Sub Name</h4>
-                    <h4>Amount</h4>
-                    <h4>Start Date</h4>
-                    <h4>Next Reminder</h4>
+                    <table>
+                        <th>Sub-Name </th>
+                        <th>Amount </th>
+                        <th>Start-Date </th>
+                        <th>Next-Reminder </th>
+
+                        {subs.map(sub => <h1> {sub.Name} : {sub.Amount} : {sub.StartDate} : {sub.NextReminder} </h1>
+                        )}
+                    </table>
                 </motion.div>
             </div>
         </div>
