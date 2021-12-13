@@ -34,6 +34,7 @@ export default function InsightSection(props) {
         catch (e) {
             // this should appear as a dropdown indicating the error 
             console.log(e.response.data.message)
+            console.log(alert(e.response.data.message))
             console.log(e)
         }
 
@@ -43,7 +44,7 @@ export default function InsightSection(props) {
             <header className="insightSectionHeader">
                 <h1 >Personal Insight</h1>
                 <section className="iconSection">
-                    <img className="iconSectionIcon" src={require('../images/Notification.png').default} />
+                   
                     <button> <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
                 </section>
             </header>
@@ -62,7 +63,7 @@ export default function InsightSection(props) {
                     delay: 0.5
                 }}
             >
-                <p>Here are some things we noticed while handling working with your finance</p>
+                <p>Here are some things we noticed with your finance</p>
                 
                 {accounts.map(account => <div className="insightCarousel"><span className="head">For Account: </span>{account.accountNumber}  <br /> <span className="head">Bank Name: </span>{account.bank} <br/> <span className="head">Total credit is: </span>{account.credit} <br /><span className="head">Total debit is:</span> {account.debit} <br /><span className="head">Estimated income is: </span>{account.income}</div>
                         )} 

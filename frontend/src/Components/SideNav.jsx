@@ -7,20 +7,17 @@ export default function SideNav(props) {
             <ul className="navItems">
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/darhboard_alt.png').default} />
-                  <Link to="/welcome">  <span>Welcome</span></Link>
+                  <Link to="/welcome" style={{ textDecoration: 'none', color: 'black' }}>  <span>Welcome</span></Link>
                 </li>
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/Menu.png').default} />
-                  <Link to="/subscription">  <span>Subscription</span></Link>
+                  <Link to="/subscription" style={{ textDecoration: 'none', color: 'black' }}>  <span>Subscription</span></Link>
                 </li>
                 <li className="navItem">
                     <img className="navItemImage" src={require('../images/Download_circle_light.png').default} />
-                    <Link to='/insight'><span>Personal Insight</span></Link>
+                    <Link to='/insight' style={{ textDecoration: 'none', color: 'black' }}><span>Personal Insight</span></Link>
                 </li>
-                <li className="navItem">
-                    <img className="navItemImage" src={require('../images/Scan_alt_light.png').default} />
-                    <span>Coming soon</span>
-                </li>
+                
             </ul>
         </nav>
     )

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Subsec from './Subsec';
 const SubSection = (props) => {
     const [accounts, setAccounts] = useState(
         [])
@@ -38,6 +39,7 @@ const SubSection = (props) => {
         catch (e) {
             // this should appear as a dropdown indicating the error 
             console.log(e.response.data.message)
+            console.log(alert(e.response.data.message))
             console.log(e)
         }
 
@@ -52,7 +54,7 @@ const SubSection = (props) => {
 
                     </div>
                     <div className="iconSec__right">
-                        <img className="iconSectionIcon" src={require('../images/Notification.png').default} />
+                       
                         <button> <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
                     </div>
 
@@ -72,15 +74,23 @@ const SubSection = (props) => {
                         delay: 0.6
                     }}
                 >
-                    <table>
+                    <table className='sub__main'>
+                    <thead>
+                        
+                        <tr>
                         <th>Sub-Name </th>
                         <th>Amount </th>
                         <th>Start-Date </th>
                         <th>Next-Reminder </th>
-
-                        {subs.map(sub => <h1> {sub.Name} : {sub.Amount} : {sub.StartDate} : {sub.NextReminder} </h1>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            
+                        {subs.map(sub => <Subsec subname={sub.Name}  subamount={sub.Amount}  substart={sub.StartDate}  subnext={sub.NextReminder} />
                         )}
-                    </table>
+                        
+                   </tbody>
+                   </table>
                 </motion.div>
             </div>
         </div>

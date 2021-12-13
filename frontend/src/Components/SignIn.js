@@ -19,6 +19,7 @@ const SignIn = () => {
         catch (e) {
             // this should appear as a dropdown indicating the error 
             console.log(e.response.data.message)
+            console.log(alert(e.response.data.message))
             console.log(e)
         }
 
