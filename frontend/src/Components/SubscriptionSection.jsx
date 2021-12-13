@@ -31,6 +31,7 @@ export default function SubscriptionSection(props) {
         catch (e) {
             // this should appear as a dropdown indicating the error 
             console.log(e.response.data.message)
+            console.log(alert(e.response.data.message))
             console.log(e)
         }
 
@@ -38,7 +39,7 @@ export default function SubscriptionSection(props) {
     return (
         <section className="subscriptionSection pageColumn">
             <section className="iconSection">
-                <img className="iconSectionIcon" src={require('../images/Notification.png').default} />
+               
                 <button> <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
             </section>
             <motion.h2
@@ -53,7 +54,7 @@ export default function SubscriptionSection(props) {
                     duration: 0.6
                 }}
             >Subscriptions</motion.h2>
-            <Link to="/subscription">
+            <Link to="/subscription" style={{ textDecoration: 'none', color: 'black' }}>
                 <p className="seeMoreSection">see more</p>
             </Link>
             <motion.table

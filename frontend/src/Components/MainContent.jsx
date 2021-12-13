@@ -150,7 +150,7 @@ export default function MainContent(props) {
                             delay: 0.9
                         }}
 
-                    ><Link to="/insight">see more</Link></motion.p>
+                    ><Link to="/insight" style={{ textDecoration: 'none', color: 'black' }}>see more</Link></motion.p>
 
                     <motion.div
                         className="insightsInfoContainer"
@@ -168,8 +168,8 @@ export default function MainContent(props) {
                         }}
                     >
 
-                        <p>During October, your financial activities spike up</p>
-                        <p>You spend more on paying debts</p>
+                        <p>Here are some things we noticed with your finance</p>
+                       
                     </motion.div>
                 </section>
 
