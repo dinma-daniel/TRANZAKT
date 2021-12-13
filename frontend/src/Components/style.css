@@ -164,6 +164,7 @@ body {
   list-style-type: none;
   padding: 0;
 }
+
 .navItem {
   margin-bottom: 50px;
   font-size: 14px;
@@ -209,7 +210,7 @@ body {
 .welcomeContent__text {
   /* border: 1px solid black; */
   font-size: xx-large;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -241,7 +242,14 @@ body {
 .insightsInfoContainer {
   min-height: 200px;
 }
-.accountsTableContainer,
+.accountsTableContainer {
+  width: 100%;
+  border: 2px solid #ffddc4;
+  border-radius: 15px;
+  font-size: 14px;
+  /* overflow-y: scroll; */
+}
+
 .insightsInfoContainer {
   width: 100%;
   border: 2px solid #ffddc4;
@@ -262,8 +270,12 @@ body {
 }
 .accountRow {
   margin-bottom: 25px;
+}
+
+.accountbody {
   overflow-y: scroll;
 }
+
 /* Styles for the subscription Section */
 .subscriptionSection {
   background-color: #fff0f0;
@@ -475,7 +487,8 @@ select {
 }
 .insightCarousel {
   width: calc(100% - 140px);
-  height: 380px;
+  padding: 2rem;
+  margin: 2rem 0;
   background-color: #fff0f0;
   border-radius: 15px;
 }
@@ -485,4 +498,11 @@ select {
   border: none;
   padding: 1rem;
   color: white;
+}
+
+.head {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #feb062;
+  line-height: 2rem;
 }

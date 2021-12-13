@@ -33,7 +33,7 @@ export default function SubscriptionSection(props) {
                 <button> <img onClick={handleLogOut} className="iconSectionIcon" src={require('../images/Sign_out_circle_light.png').default} /></button>
             </section>
             <h2 className="subscriptionsHeader">Subscriptions</h2>
-            <Link to="/subscription">
+            <Link to="/subscription" style={{ textDecoration: 'none', color: 'black' }}>
                 <p className="seeMoreSection">see more</p>
             </Link>
             <table className="subscriptionDetails">

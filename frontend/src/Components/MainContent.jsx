@@ -41,7 +41,7 @@ export default function MainContent(props) {
                 <h2 className="accountsSectionTitle">Your Accounts</h2>
                 <p className="seeMoreSection">see more</p>
                 <table className="accountsTableContainer">
-                    <tbody>
+                    <tbody className="accountbody">
                         {accounts.map(account => <AccountRow accNumber={account.accountNumber} bankName={account.bank} accBalance={account.balance} key={accounts.indexOf(account)} />)}
                     </tbody>
                     <Mono />
@@ -50,7 +50,7 @@ export default function MainContent(props) {
             <section className="insightSection">
                 <h2 className="insightsSectionTitle">Personal Insight</h2>
 
-                <p className="seeMoreSection"><Link to="/insight">see more</Link></p>
+                <p className="seeMoreSection"><Link to="/insight" style={{ textDecoration: 'none', color: 'black' }}>see more</Link></p>
 
                 <div className="insightsInfoContainer">
                     <p>During October, your financial activities spike up</p>

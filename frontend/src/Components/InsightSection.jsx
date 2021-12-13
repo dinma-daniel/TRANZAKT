@@ -42,11 +42,11 @@ export default function InsightSection(props) {
             </header>
             <section className="mainInsightSection">
                 <p>Here are some things we noticed while working with your finance</p>
-                <div className="insightCarousel">
-                    <h1>
-                        {accounts.map(account => <p>For Account: {account.accountNumber}  <br /> Total credit is: {account.credit} <br />Total debit is: {account.debit} <br />Estimated income is: {account.income} </p>
-                        )} </h1>
-                </div>
+
+                
+                        {accounts.map(account => <div className="insightCarousel"><span className="head">For Account: </span>{account.accountNumber}  <br /> <span className="head">Bank Name: </span>{account.bank} <br/> <span className="head">Total credit is: </span>{account.credit} <br /><span className="head">Total debit is:</span> {account.debit} <br /><span className="head">Estimated income is: </span>{account.income}</div>
+                        )} 
+                
             </section >
         </div >
     );
