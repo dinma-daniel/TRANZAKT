@@ -1,6 +1,7 @@
 import SideNav from "./SideNav"
 import RegistrationBody from "./RegistrationBody";
 import SubSection from "./SubSection";
+import ResponsivenessPrompt from "./ResponsivenessPrompt";
 const Subscription = (props) => {
     return ( 
     <>
@@ -9,6 +10,7 @@ const Subscription = (props) => {
             <RegistrationBody />
             <SubSection history={props.history}/>
         </div>
+        <ResponsivenessPrompt />
     </>
      );
 }

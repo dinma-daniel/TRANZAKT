@@ -523,3 +523,39 @@ select {
   color: #feb062;
   line-height: 2rem;
 }
+
+/* Styles for responsiveness */
+
+@media screen and (max-width: 1000px) {
+  .pageColumn,
+  .sub__body {
+    display: none;
+  }
+  .responsivenessPrompt {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .responsivenessPrompt {
+    display: none;
+  }
+}
+.bigScreenImage {
+  max-width: 200px;
+}
+.loaderAnimationContainerBigScreens .textContainer h1 {
+  font-size: 20px;
+  color: white;
+}
+.loaderAnimationContainerBigScreens .textContainer h2 {
+  font-size: 18px;
+  color: white;
+}
