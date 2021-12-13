@@ -12,7 +12,7 @@ export default function Mono(props) {
         // send the username and password to the server
         const { data } = await axios.post(`/mono/auth`, cod);
       },
-      key: "test_pk_33oDsUbi6XLqqnwTY0vo"
+      key: "live_pk_l7vzWBnWxmWmJMAwSJNJ"
     })
 
     monoInstance.setup()
