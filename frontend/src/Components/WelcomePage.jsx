@@ -2,6 +2,7 @@ import SideNav from './SideNav';
 import MainContent from './MainContent';
 import SubscriptionSection from './SubscriptionSection';
 import Mono from "./mono";
+import ResponsivenessPrompt from './ResponsivenessPrompt';
 
 
 
@@ -17,6 +18,8 @@ export default function WelcomePage(props) {
             <MainContent />
             <SubscriptionSection />
         </div>
+        <ResponsivenessPrompt/>
+        
     </>
     );
 }
