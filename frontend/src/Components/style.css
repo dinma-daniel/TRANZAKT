@@ -475,7 +475,8 @@ select {
 }
 .insightCarousel {
   width: calc(100% - 140px);
-  height: 380px;
+  padding: 2rem;
+  margin: 2rem 0;
   background-color: #fff0f0;
   border-radius: 15px;
 }
@@ -508,4 +509,11 @@ select {
   border: none;
   padding: 1rem;
   color: white;
+}
+
+.head {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #feb062;
+  line-height: 2rem;
 }
