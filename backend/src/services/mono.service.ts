@@ -15,7 +15,7 @@ class MonoService {
       if (isEmpty(Code)) throw new HttpException(400, 'NO auth code gotten');
 
       const monoClient = new Mono({
-        secretKey: 'live_sk_IeuvM1JYJ1CpM9bOnavZ',
+        secretKey: 'lnnnnn",
       });
 
       const monoAccountId = await monoClient.auth.getAccountId({ code: Code });
