@@ -1,3 +1,3 @@
 # TRANZAKT
 
-[Tranzact](https://medium.com/@fajiolaotan/introduction-and-problem-statement-be1db99cce24)
+[Tranzakt](https://medium.com/@fajiolaotan/introduction-and-problem-statement-be1db99cce24)
